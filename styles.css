@@ -1,84 +1,62 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* General styling */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    color: #333;
-    background-color: #fff;
+  font-family: 'Georgia', serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header styles */
 header {
-    background-color: #3f51b5;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #ff8c00;
+  padding: 20px;
+  text-align: center;
 }
 
-header .logo img {
-    max-width: 150px;
+header img {
+  width: 150px;
 }
 
-header nav ul {
-    list-style-type: none;
+nav {
+  background-color: #ffffff;
+  padding: 10px 0;
 }
 
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
+nav ul li {
+  margin: 0 15px;
 }
 
-/* Main Section */
 main {
-    padding: 20px;
+  padding: 20px;
 }
 
-.featured-posts {
-    margin-bottom: 40px;
+#editor {
+  display: flex;
+  justify-content: space-between;
 }
 
-.featured-posts .post {
-    margin-bottom: 20px;
+#drag-drop-area {
+  width: 60%;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px dashed #ccc;
 }
 
-.featured-posts .post h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+#invitation-preview {
+  margin-top: 20px;
 }
 
-.featured-posts .post p {
-    font-size: 16px;
-    color: #555;
+#settings {
+  width: 35%;
 }
 
-.featured-posts .post a {
-    text-decoration: none;
-    color: #3f51b5;
-    font-weight: bold;
-}
-
-/* Footer Styles */
 footer {
-    background-color: #f8f8f8;
-    color: #333;
-    padding: 20px;
-    text-align: center;
-}
-
-footer .social-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #3f51b5;
+  text-align: center;
+  padding: 10px;
+  background-color: #ff8c00;
+  color: #ffffff;
 }
