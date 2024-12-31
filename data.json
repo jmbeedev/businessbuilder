@@ -1,0 +1,26 @@
+{
+  "menu": [
+    { "name": "Home", "link": "#home" },
+    { "name": "About", "link": "#about" },
+    { "name": "Services", "link": "#services" },
+    { "name": "Contact", "link": "#contact" }
+  ],
+  "sections": {
+    "home": {
+      "title": "Welcome to My Website",
+      "content": "This is the home section."
+    },
+    "about": {
+      "title": "About Us",
+      "content": "We are a company focused on providing great services."
+    },
+    "services": {
+      "title": "Our Services",
+      "content": "We offer web development, design, and more."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "Email us at contact@example.com"
+    }
+  }
+}
