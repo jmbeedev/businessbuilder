@@ -1,52 +1,84 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* General styling */
 body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
 }
 
+/* Header styles */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #f8f9fa;
-}
-
-.logo {
-  max-height: 50px;
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-}
-
-main {
-  padding: 2rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f1f1f1;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
-  nav {
-    flex-direction: column;
+    background-color: #3f51b5;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+.featured-posts {
+    margin-bottom: 40px;
+}
+
+.featured-posts .post {
+    margin-bottom: 20px;
+}
+
+.featured-posts .post h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.featured-posts .post p {
+    font-size: 16px;
+    color: #555;
+}
+
+.featured-posts .post a {
+    text-decoration: none;
+    color: #3f51b5;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3f51b5;
 }
