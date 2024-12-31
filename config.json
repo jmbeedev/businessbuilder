@@ -1,0 +1,53 @@
+
+{
+  "siteSettings": {
+    "title": "Website Business Blog",
+    "description": "A complete solution for business, blogs, and company profiles",
+    "logo": "https://example.com/logo.png",
+    "favicon": "https://example.com/favicon.ico",
+    "theme": "light",
+    "layout": "grid"
+  },
+  "menus": [
+    { "name": "Home", "url": "/" },
+    { "name": "About", "url": "/about" },
+    { "name": "Services", "url": "/services" },
+    { "name": "Blog", "url": "/blog" },
+    { "name": "Contact", "url": "/contact" }
+  ],
+  "features": {
+    "dragAndDropEditor": true,
+    "responsiveDesign": true,
+    "preDesignedTemplates": true,
+    "themeBuilder": true,
+    "popupBuilder": true,
+    "woocommerceBuilder": false,
+    "customCSSIntegration": true,
+    "globalWidgets": true,
+    "motionEffects": true,
+    "dynamicContent": true,
+    "inlineTextEditing": true,
+    "revisionHistory": true,
+    "roleManager": true,
+    "formBuilder": true,
+    "integrations": {
+      "thirdPartyTools": ["Mailchimp", "Zapier", "Google Analytics"]
+    },
+    "typographySettings": {
+      "fontFamily": "Arial, sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "1.5"
+    },
+    "breakpoints": {
+      "desktop": 1200,
+      "tablet": 768,
+      "mobile": 480
+    }
+  },
+  "animations": {
+    "fadeIn": true,
+    "slideIn": true,
+    "zoomIn": true,
+    "custom": []
+  }
+}
