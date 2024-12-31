@@ -1,34 +1,48 @@
-// Ambil data dari JSON
+// Fetch JSON data and render the page dynamically
 fetch('data.json')
-  .then(response => {
-    if (!response.ok) throw new Error('Failed to fetch JSON');
-    return response.json();
-  })
+  .then(response => response.json())
   .then(data => {
-    // Generate Menu
-    const menu = document.getElementById('menu');
-    data.menu.forEach(item => {
-      const link = document.createElement('a');
-      link.href = item.link;
-      link.textContent = item.name;
-      menu.appendChild(link);
-    });
+    renderHeader(data.header);
+    renderHeroSection(data.hero);
+    renderFooter(data.footer);
+  });
 
-    // Generate Content
-    const content = document.getElementById('content');
-    Object.keys(data.sections).forEach(key => {
-      const section = document.createElement('section');
-      section.id = key;
+// Render Header
+function renderHeader(headerData) {
+  const header = document.getElementById('header');
+  let html = `<a href="${headerData.logo.link}" class="logo">${headerData.logo.text}</a><nav><ul>`;
+  headerData.navLinks.forEach(link => {
+    html += `<li><a href="${link.link}">${link.text}</a></li>`;
+  });
+  html += `</ul></nav>`;
+  header.innerHTML = html;
+}
 
-      const title = document.createElement('h2');
-      title.textContent = data.sections[key].title;
-      section.appendChild(title);
+// Render Hero Section
+function renderHeroSection(heroData) {
+  const heroSection = document.getElementById('hero-section');
+  let html = `
+    <div class="hero-image">
+      <img src="${heroData.image}" alt="Profile Image">
+    </div>
+    <div class="hero-content">
+      <h1>${heroData.title}</h1>
+      <h2>${heroData.name}</h2>
+      <p>${heroData.description}</p>
+      <div class="hero-buttons">`;
+  heroData.buttons.forEach(button => {
+    html += `<a href="${button.link}" class="btn-${button.style}">${button.text}</a>`;
+  });
+  html += `</div><div class="social-links">`;
+  heroData.socialLinks.forEach(link => {
+    html += `<a href="${link.link}" class="icon-${link.icon}"></a>`;
+  });
+  html += `</div></div>`;
+  heroSection.innerHTML = html;
+}
 
-      const paragraph = document.createElement('p');
-      paragraph.textContent = data.sections[key].content;
-      section.appendChild(paragraph);
-
-      content.appendChild(section);
-    });
-  })
-  .catch(error => console.error('Error loading JSON:', error));
+// Render Footer
+function renderFooter(footerData) {
+  const footer = document.getElementById('footer');
+  footer.innerHTML = `<p>${footerData.text}</p>`;
+}
