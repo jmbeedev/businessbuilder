@@ -1,26 +1,34 @@
 {
-  "menu": [
-    { "name": "Home", "link": "#home" },
-    { "name": "About", "link": "#about" },
-    { "name": "Services", "link": "#services" },
-    { "name": "Contact", "link": "#contact" }
-  ],
-  "sections": {
-    "home": {
-      "title": "Welcome to My Website",
-      "content": "This is the home section."
+  "header": {
+    "logo": {
+      "text": "Rico.J.I",
+      "link": "#"
     },
-    "about": {
-      "title": "About Us",
-      "content": "We are a company focused on providing great services."
-    },
-    "services": {
-      "title": "Our Services",
-      "content": "We offer web development, design, and more."
-    },
-    "contact": {
-      "title": "Contact Us",
-      "content": "Email us at contact@example.com"
-    }
+    "navLinks": [
+      { "text": "Home", "link": "#home" },
+      { "text": "Portfolio", "link": "#portfolio" },
+      { "text": "Resume", "link": "#resume" },
+      { "text": "Blog", "link": "#blog" },
+      { "text": "Contact", "link": "#contact" }
+    ]
+  },
+  "hero": {
+    "image": "path/to/profile-image.jpg",
+    "title": "Hi I'm UX Designer",
+    "name": "Rico.J.I",
+    "description": "\"Every line of code you write is a step closer to turning ideas into reality. Stay curious, embrace challenges, and never stop building. The future is in your hands—one function at a time.\"",
+    "buttons": [
+      { "text": "Download CV", "link": "#", "style": "primary" },
+      { "text": "Contact", "link": "#", "style": "secondary" }
+    ],
+    "socialLinks": [
+      { "icon": "facebook", "link": "https://facebook.com" },
+      { "icon": "linkedin", "link": "https://linkedin.com" },
+      { "icon": "instagram", "link": "https://instagram.com" },
+      { "icon": "dribbble", "link": "https://dribbble.com" }
+    ]
+  },
+  "footer": {
+    "text": "© 2024 Rico.J.I. All rights reserved."
   }
 }
