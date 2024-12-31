@@ -1,48 +1,34 @@
-// Fetch JSON data and render the page dynamically
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    renderHeader(data.header);
-    renderHeroSection(data.hero);
-    renderFooter(data.footer);
-  });
 
-// Render Header
-function renderHeader(headerData) {
-  const header = document.getElementById('header');
-  let html = `<a href="${headerData.logo.link}" class="logo">${headerData.logo.text}</a><nav><ul>`;
-  headerData.navLinks.forEach(link => {
-    html += `<li><a href="${link.link}">${link.text}</a></li>`;
-  });
-  html += `</ul></nav>`;
-  header.innerHTML = html;
-}
+fetch("config.json")
+  .then((response) => response.json())
+  .then((data) => {
+    // Set site title
+    document.title = data.siteSettings.title;
 
-// Render Hero Section
-function renderHeroSection(heroData) {
-  const heroSection = document.getElementById('hero-section');
-  let html = `
-    <div class="hero-image">
-      <img src="${heroData.image}" alt="Profile Image">
-    </div>
-    <div class="hero-content">
-      <h1>${heroData.title}</h1>
-      <h2>${heroData.name}</h2>
-      <p>${heroData.description}</p>
-      <div class="hero-buttons">`;
-  heroData.buttons.forEach(button => {
-    html += `<a href="${button.link}" class="btn-${button.style}">${button.text}</a>`;
-  });
-  html += `</div><div class="social-links">`;
-  heroData.socialLinks.forEach(link => {
-    html += `<a href="${link.link}" class="icon-${link.icon}"></a>`;
-  });
-  html += `</div></div>`;
-  heroSection.innerHTML = html;
-}
+    // Set menu
+    const menu = document.getElementById("menu");
+    data.menus.forEach((item) => {
+      const link = document.createElement("a");
+      link.href = item.url;
+      link.textContent = item.name;
+      menu.appendChild(link);
+    });
 
-// Render Footer
-function renderFooter(footerData) {
-  const footer = document.getElementById('footer');
-  footer.innerHTML = `<p>${footerData.text}</p>`;
-}
+    // Set features dynamically
+    const content = document.getElementById("content");
+    content.innerHTML = `
+      <h1>Welcome to ${data.siteSettings.title}</h1>
+      <p>${data.siteSettings.description}</p>
+    `;
+
+    // Add animations
+    if (data.animations.fadeIn) {
+      content.classList.add("fade-in");
+    }
+  })
+  .catch((error) => console.error("Error loading config.json:", error));
+
+// Example animation
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#content").classList.add("fade-in");
+});
