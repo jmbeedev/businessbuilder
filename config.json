@@ -1,53 +1,143 @@
-
 {
-  "siteSettings": {
-    "title": "Website Business Blog",
-    "description": "A complete solution for business, blogs, and company profiles",
-    "logo": "https://example.com/logo.png",
-    "favicon": "https://example.com/favicon.ico",
-    "theme": "light",
-    "layout": "grid"
-  },
-  "menus": [
-    { "name": "Home", "url": "/" },
-    { "name": "About", "url": "/about" },
-    { "name": "Services", "url": "/services" },
-    { "name": "Blog", "url": "/blog" },
-    { "name": "Contact", "url": "/contact" }
-  ],
-  "features": {
-    "dragAndDropEditor": true,
-    "responsiveDesign": true,
-    "preDesignedTemplates": true,
-    "themeBuilder": true,
-    "popupBuilder": true,
-    "woocommerceBuilder": false,
-    "customCSSIntegration": true,
-    "globalWidgets": true,
-    "motionEffects": true,
-    "dynamicContent": true,
-    "inlineTextEditing": true,
-    "revisionHistory": true,
-    "roleManager": true,
-    "formBuilder": true,
-    "integrations": {
-      "thirdPartyTools": ["Mailchimp", "Zapier", "Google Analytics"]
+  "ui_ux": {
+    "theme": {
+      "layout": "responsive",
+      "colors": {
+        "primary": "#3f51b5",
+        "secondary": "#ff4081",
+        "background": "#ffffff",
+        "text": "#333333"
+      },
+      "font": {
+        "family": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      "header": {
+        "logo": "https://professionalcorporation.org/wp-content/uploads/2024/06/Professional-Corporation.png",
+        "navigation": [
+          {"label": "Home", "link": "/"},
+          {"label": "About Us", "link": "/about"},
+          {"label": "Services", "link": "/services"},
+          {"label": "Contact", "link": "/contact"}
+        ]
+      },
+      "footer": {
+        "copyright": "© 2024 Professional Corporation",
+        "social_links": [
+          {"platform": "Facebook", "url": "https://facebook.com"},
+          {"platform": "Instagram", "url": "https://instagram.com"}
+        ]
+      }
     },
-    "typographySettings": {
-      "fontFamily": "Arial, sans-serif",
-      "fontSize": "16px",
-      "lineHeight": "1.5"
-    },
-    "breakpoints": {
-      "desktop": 1200,
-      "tablet": 768,
-      "mobile": 480
+    "layout": {
+      "main_section": {
+        "type": "grid",
+        "columns": 2,
+        "sidebar": true
+      },
+      "posts_per_page": 10,
+      "pagination": {
+        "enabled": true,
+        "type": "numeric"
+      }
     }
   },
-  "animations": {
-    "fadeIn": true,
-    "slideIn": true,
-    "zoomIn": true,
-    "custom": []
+  "content_data": {
+    "site_title": "Professional Corporation",
+    "site_description": "A leading company providing job vacancy information and career guidance.",
+    "meta_tags": {
+      "description": "Professional Corporation provides the latest job vacancies and career advice.",
+      "keywords": "job vacancies, career, recruitment, jobs, professional corporation",
+      "author": "Professional Corporation Team"
+    }
+  },
+  "blog_posts": [
+    {
+      "title": "Loker Receptionist Karawang",
+      "date": "2024-12-31",
+      "content": "Info Lowongan Kerja Receptionist Karawang 2024, PT. ABC Buka Loker Terbaru Untuk Lulusan SMA...",
+      "categories": ["Admin", "Karawang"],
+      "tags": ["receptionist", "part-time", "Karawang"],
+      "meta": {
+        "description": "Job vacancy for Receptionist in Karawang, available for high school graduates.",
+        "keywords": "Receptionist, Karawang, Part-time, Job Vacancy"
+      },
+      "schema": {
+        "job_title": "Receptionist",
+        "location": "Karawang",
+        "company": "PT. ABC",
+        "date_posted": "2024-12-31",
+        "salary": "IDR 4,000,000 - IDR 5,000,000",
+        "contact_email": "professionalcorporationlisted@gmail.com",
+        "job_type": "Part-time",
+        "responsibilities": "Greet clients, handle phone calls, manage office tasks.",
+        "requirements": "High school diploma, good communication skills, friendly personality."
+      }
+    },
+    {
+      "title": "Loker Digital Marketing Jakarta",
+      "date": "2024-12-30",
+      "content": "Info Lowongan Kerja Digital Marketing Jakarta 2024, PT. XYZ Buka Loker Terbaru Untuk Lulusan S1...",
+      "categories": ["Marketing", "Jakarta"],
+      "tags": ["digital marketing", "full-time", "Jakarta"],
+      "meta": {
+        "description": "Job vacancy for Digital Marketing in Jakarta, open for university graduates.",
+        "keywords": "Digital Marketing, Jakarta, Full-time, Job Vacancy"
+      },
+      "schema": {
+        "job_title": "Digital Marketing Specialist",
+        "location": "Jakarta",
+        "company": "PT. XYZ",
+        "date_posted": "2024-12-30",
+        "salary": "IDR 7,000,000 - IDR 10,000,000",
+        "contact_email": "professionalcorporationlisted@gmail.com",
+        "job_type": "Full-time",
+        "responsibilities": "Manage online marketing campaigns, social media presence, and SEO.",
+        "requirements": "Bachelor’s degree in Marketing or related field, experience in digital marketing."
+      }
+    }
+  ],
+  "company_profile": {
+    "company_name": "Professional Corporation",
+    "established": "2020",
+    "industry": "Recruitment & Employment",
+    "about_us": "We provide top-notch job vacancy information and career advice to help both employers and job seekers find the best matches.",
+    "mission": "To connect talented individuals with great career opportunities.",
+    "vision": "To become a global leader in job recruitment and career consulting.",
+    "address": {
+      "street": "Bida Asri 1, Batam Center",
+      "city": "Batam",
+      "region": "Kepulauan Riau",
+      "postal_code": "29465",
+      "country": "ID"
+    },
+    "contact_info": {
+      "email": "parttimefreelanceonline@gmail.com",
+      "phone": "+601114132709"
+    }
+  },
+  "additional_features": {
+    "search": {
+      "enabled": true,
+      "type": "custom",
+      "query_params": ["job_title", "location", "company"]
+    },
+    "seo": {
+      "enabled": true,
+      "meta_tags": {
+        "robots": "index, follow",
+        "viewport": "width=device-width, initial-scale=1"
+      },
+      "sitemap": "/sitemap.xml",
+      "robots_txt": "/robots.txt"
+    },
+    "analytics": {
+      "enabled": true,
+      "tracking_id": "UA-XXXXXXXXX-X"
+    },
+    "newsletter": {
+      "enabled": true,
+      "form_action": "/subscribe"
+    }
   }
 }
