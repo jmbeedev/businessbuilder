@@ -1,60 +1,56 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Corporation provides the latest job vacancies and career advice.">
-    <meta name="keywords" content="job vacancies, career, recruitment, jobs, professional corporation">
-    <meta name="author" content="Professional Corporation Team">
-    <title>Professional Corporation</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation Builder</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="https://professionalcorporation.org/wp-content/uploads/2024/06/Professional-Corporation.png" alt="Professional Corporation Logo">
+  <header>
+    <img id="logo" src="assets/images/logo.png" alt="Wedding Invitation Logo">
+  </header>
+
+  <nav>
+    <ul id="menu"></ul>
+  </nav>
+
+  <main>
+    <section id="editor">
+      <div id="drag-drop-area">
+        <h2>Customize Your Invitation</h2>
+        <div id="invitation-preview">
+          <h3>Your Wedding Invitation Preview</h3>
+          <div id="invitation-content">
+            <!-- Invitation Content Will Be Added Here -->
+          </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+      </div>
+    </section>
 
-    <!-- Main Section -->
-    <main>
-        <section class="featured-posts">
-            <h2>Latest Job Posts</h2>
-            <div class="post">
-                <h3>Loker Receptionist Karawang</h3>
-                <p>Info Lowongan Kerja Receptionist Karawang 2024, PT. ABC Buka Loker Terbaru Untuk Lulusan SMA...</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="post">
-                <h3>Loker Digital Marketing Jakarta</h3>
-                <p>Info Lowongan Kerja Digital Marketing Jakarta 2024, PT. XYZ Buka Loker Terbaru Untuk Lulusan S1...</p>
-                <a href="#">Read More</a>
-            </div>
-        </section>
+    <section id="settings">
+      <h2>Customization Settings</h2>
+      <div id="color-picker">
+        <label for="color-primary">Primary Color: </label>
+        <input type="color" id="color-primary" value="#ff8c00">
+        <label for="color-secondary">Secondary Color: </label>
+        <input type="color" id="color-secondary" value="#ffffff">
+      </div>
+      <div id="font-selector">
+        <label for="font-selector">Font Style: </label>
+        <select id="font-selector">
+          <option value="Georgia">Georgia</option>
+          <option value="Arial">Arial</option>
+          <option value="Courier New">Courier New</option>
+        </select>
+      </div>
+    </section>
+  </main>
 
-        <section class="company-profile">
-            <h2>About Us</h2>
-            <p>We provide top-notch job vacancy information and career advice to help both employers and job seekers find the best matches.</p>
-        </section>
-    </main>
+  <footer>
+    <p>&copy; 2024 Wedding Invitation Builder. All rights reserved.</p>
+  </footer>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Professional Corporation</p>
-        <div class="social-links">
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://instagram.com">Instagram</a>
-        </div>
-    </footer>
+  <script src="script.js"></script>
 </body>
 </html>
